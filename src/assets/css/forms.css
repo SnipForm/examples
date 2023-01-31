@@ -1,0 +1,27 @@
+.form-label {
+    @apply block text-sm font-medium text-gray-700 dark:text-zinc-500 mt-4;
+}
+
+.form-input {
+    @apply block w-full rounded-md  shadow-sm focus:border-primary-500 focus:ring-primary-500 sm:text-sm mt-1;
+    @apply border-gray-300 bg-white;
+    @apply dark:border-zinc-600 dark:bg-zinc-800;
+}
+
+.form-input-error {
+    @apply focus:border-red-500 focus:ring-red-500;
+    @apply border-red-300;
+    @apply dark:border-red-600;
+}
+
+.form-button {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+}
+
+.form-error-text {
+    @apply block text-sm font-medium text-red-600 dark:text-red-400 ml-1;
+}
+
+.form-helper {
+    @apply block text-xs font-medium text-gray-500 dark:text-zinc-400 ml-1;
+}

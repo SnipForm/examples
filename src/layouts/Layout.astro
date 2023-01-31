@@ -1,0 +1,27 @@
+---
+import Navigation from "./Navigation.astro";
+import "../assets/css/app.css";
+import "../assets/css/forms.css";
+import ModeScript from "../scripts/ModeScript.astro";
+import Header from "./Header.astro";
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+        <ModeScript />
+    </head>
+    <body class="relative min-h-screen">
+        <main class="app-container">
+            <Header />
+            <slot />
+        </main>
+    </body>
+</html>

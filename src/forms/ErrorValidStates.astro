@@ -1,0 +1,24 @@
+<snip-form key="YOUR_KEY">
+    <!-- Your normal form -->
+    <form action="/does-not-matter">
+        <!-- if-error-show will trigger if there are any errors -->
+        <section if-error-show style="display:none" class="text-red-500 text-lg text-center">There were errors, OMG!</section>
+        <div class="mb-2">
+            <label error-class:full_name="!text-red-400" for="name" class="form-label">Full Name</label>
+            <input sf-validate:required error-class:full_name="form-input-error" class="form-input" type="text" name="full_name" id="name" />
+            <p error-show-text:full_name class="form-error-text"></p>
+            <p valid-show:full_name class="form-helper">Please include your middle name</p>
+        </div>
+        <div class="mb-2">
+            <label error-class:email="!text-red-400" for="email" class="form-label">Email</label>
+            <input sf-validate:email error-class:email="form-input-error" type="email" name="email" id="email" class="form-input" placeholder="you@example.com" />
+            <p error-show-text:email class="form-error-text"></p>
+        </div>
+        <div class="flex justify-end">
+            <button type="submit" if-error-style="text-transform: uppercase;" class="form-button" if-error-text="Please Re-submit">Submit</button>
+        </div>
+    </form>
+    <!-- /Your normal form -->
+</snip-form>
+<!-- This should usually go at the bottom of your page -->
+<script src="https://cdn.snipform.io/wrap/sf.iife.js" defer></script>

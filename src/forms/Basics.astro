@@ -1,0 +1,21 @@
+<snip-form key="YOUR_KEY">
+    <!-- Your normal form -->
+    <form action="/does-not-matter">
+        <div class="mb-2">
+            <label for="name" class="form-label">Full Name</label>
+            <input sf-validate:required="Please enter your name" type="text" name="full_name" id="name" class="form-input" />
+            <p error-show-text:full_name class="form-error-text"></p>
+        </div>
+        <div class="mb-2">
+            <label for="email" class="form-label">Email</label>
+            <input sf-validate:email type="email" name="email" id="email" class="form-input" placeholder="you@example.com" />
+            <p error-show-text:email class="form-error-text"></p>
+        </div>
+        <div class="flex justify-end">
+            <button type="submit" class="form-button">Submit</button>
+        </div>
+    </form>
+    <!-- /Your normal form -->
+</snip-form>
+<!-- This should usually go at the bottom of your page -->
+<script src="https://cdn.snipform.io/wrap/sf.iife.js" defer></script>

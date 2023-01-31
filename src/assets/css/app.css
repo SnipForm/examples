@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Elements */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    @apply text-zinc-800 dark:text-zinc-50 dark:bg-zinc-900 bg-zinc-50;
+    @apply dark:bg-gradient-radial dark:from-zinc-700 dark:via-zinc-900 dark:to-zinc-900 bg-[length:2000px_2000px] bg-[center_-1200px] bg-no-repeat;
+}
+
+h1,
+h2 {
+    @apply bg-clip-text text-transparent bg-gradient-to-r dark:from-zinc-600 dark:to-zinc-200 from-zinc-600 to-zinc-600;
+}
+
+h3,
+h4,
+h5,
+h6 {
+    @apply dark:text-zinc-400 text-zinc-700;
+}
+
+a.link {
+    @apply text-primary-600 hover:text-primary-500 hover:underline;
+}
+
+code {
+    @apply text-secondary-600;
+}
+
+h1 {
+    @apply text-4xl;
+}
+
+h2 {
+    @apply text-3xl;
+}
+
+h3 {
+    @apply text-2xl;
+}
+
+h4 {
+    @apply text-xl;
+}
+
+h5 {
+    @apply text-lg;
+}
+
+ul {
+    @apply list-disc ml-4;
+}
+
+ol {
+    @apply list-decimal  ml-4;
+}
+
+/* Chrome autofill override */
+input:-webkit-autofill {
+    transition: all 0s 50000s;
+}
+
+/* Components */
+.app-container {
+    @apply container w-full max-w-2xl mx-auto pb-24 p-4;
+}
+
+.nav-container {
+    @apply flex rounded-full bg-white/90 px-3 text-sm font-medium text-zinc-800 shadow-lg shadow-zinc-800/5 ring-1 ring-zinc-900/5 backdrop-blur dark:bg-zinc-800/90 dark:text-zinc-200 dark:ring-white/10 outline-none;
+}
+
+.nav {
+    @apply relative block px-3 py-2 transition;
+    @apply hover:text-primary-500 dark:hover:text-primary-400;
+}
+
+.nav-active {
+    @apply relative block px-3 py-2 transition;
+    @apply text-primary-500 dark:text-primary-600;
+}
+
+.nav-active-span {
+    @apply absolute inset-x-1 -bottom-px h-px bg-gradient-to-r from-primary-500/0 via-primary-500/40 to-primary-500/0 dark:from-primary-600/0 dark:via-primary-700/40 dark:to-primary-700/0;
+}

@@ -1,0 +1,67 @@
+<snip-form key="YOUR_KEY">
+    <!-- Your normal form -->
+    <form action="/does-not-matter">
+        <div class="mb-2">
+            <label for="link" class="form-label">A link</label>
+            <input sf-validate:url type="text" name="link" id="link" class="form-input" />
+            <p error-show-text:link class="form-error-text"></p>
+        </div>
+        <div class="mb-2">
+            <label for="active_link" class="form-label">An active url</label>
+            <input sf-validate:active_url="This URL does not exist in the real world" type="text" name="active_link" id="link" class="form-input" />
+            <p error-show-text:active_link class="form-error-text"></p>
+        </div>
+        <div class="mb-2">
+            <label for="coffee" class="form-label">Do you like coffee?</label>
+            <select sf-validate:boolean="Please select yes or no" name="coffee" class="form-input">
+                <option value="">Please select</option>
+                <option value="true">Yes</option>
+                <option value="false">No</option>
+            </select>
+            <p error-show-text:coffee class="form-error-text"></p>
+        </div>
+        <div class="mb-2">
+            <label for="age" class="form-label">How old are you?</label>
+            <input sf-validate:min[18]="You need to be 18 or older to continue" type="number" name="age" id="link" class="form-input" />
+            <p error-show-text:age class="form-error-text"></p>
+        </div>
+        <div class="mb-2">
+            <label for="color" class="form-label">What color do you get if you mix red and white?</label>
+            <input sf-validate:in[pink,rose]="Wrong color, please try again" type="text" name="color" class="form-input" />
+            <p error-show-text:color class="form-error-text"></p>
+        </div>
+        <div class="mb-2">
+            <label for="start_date" class="form-label">When would you like to start?</label>
+            <input sf-validate:after[tomorrow]="You can only start after tomorrow" type="date" id="start_date" name="start_date" class="form-input" />
+            <p error-show-text:start_date class="form-error-text"></p>
+        </div>
+        <div class="mb-2 mt-8">
+            <div class="bg-stone-800 -mt-4 p-3 rounded">
+                <label for="recovery_word" class="form-label">Recovery word</label>
+                <input sf-validate:required sf-validate:same[recovery_word_confirmation]="Recovery words do not match" type="text" name="recovery_word" class="form-input" />
+
+                <label for="recovery_word_confirmation" class="form-label">Confirm Recovery word</label>
+                <input type="text" name="recovery_word_confirmation" class="form-input" />
+                <p error-show-text:recovery_word class="form-error-text"></p>
+            </div>
+        </div>
+        <div class="mb-2">
+            <label for="scale" class="form-label">On a scale of 0 to 10, how much do you hate building form backends?</label>
+            <input sf-validate:min[3]="We don't believe you" sf-validate:max[9]="We hate it too, but not at 10" sf- id="scale" name="scale" type="range" value="2" min="0" max="10" step="1" class="w-full h-3 bg-gray-200 rounded-lg appearance-none cursor-pointer range-lg dark:bg-gray-700" />
+            <p error-show-text:scale class="form-error-text"></p>
+        </div>
+        <div class="mb-2">
+            <div class="flex gap-2 items-center">
+                <label class="form-label" for="accept_terms">I accept the terms of service</label>
+                <input sf-validate:accepted="Please accept to continue" type="checkbox" name="accept_terms" id="accept_terms" value="yes" class="h-4 w-4 rounded border-gray-300 text-primary-600 focus:ring-primary-500 mt-4" />
+            </div>
+            <p error-show-text:accept_terms class="form-error-text"></p>
+        </div>
+        <div class="flex justify-end">
+            <button type="submit" class="form-button">Submit</button>
+        </div>
+    </form>
+    <!-- /Your normal form -->
+</snip-form>
+<!-- This should usually go at the bottom of your page -->
+<script src="https://cdn.snipform.io/wrap/sf.iife.js" defer></script>

@@ -1,0 +1,40 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+import Shorthand from "../forms/Shorthand.astro";
+---
+
+<Layout title="Full Example (Shorthand)">
+    <main>
+        <h1 class="mb-4">Full Example (Shorthand)</h1>
+        <p class="mb-4">Edit this form at <code>src/forms/Shorthand.astro</code></p>
+        <!-- Form -->
+        <Card class="mb-4">
+            <Shorthand />
+        </Card>
+        <!-- /Form -->
+        <h2 class="mb-4">On this form:</h2>
+        <ul class="mb-4">
+            <li>Create your own HTML result content within <code>sf-result</code> tags</li>
+            <li>Add form variables in the content using <code>%field_name%</code> - if the field value is empty then it will not show</li>
+            <li class="bg-yellow-400 bg-opacity-10">
+                Note: It's best practice to hide state content (like results) whist the engine loads with <code>style="display:none"</code>
+            </li>
+            <li>Add validation to form element using <code>sf-validate:[type]</code></li>
+            <li>If there are no errors, unhide element using <code>~[field_name]:show</code></li>
+            <li>Return errors to an element using the directive <code>![field_name]:show-text</code></li>
+            <li>Conditional classes for error <code>![field_name]:class="error-class"</code></li>
+            <li>Unhides element during loading AND submit state <code>loading:show</code></li>
+            <li>Unhides element during submit state only <code>submit:show</code></li>
+            <li>Apply a class during submit state only <code>submit:class</code></li>
+        </ul>
+        <h2 class="my-4">Documentation reference</h2>
+        <ul>
+            <li><a href="https://docs.snipform.io/docs/result-content" target="_blank" class="link">Result content</a></li>
+            <li><a href="https://docs.snipform.io/docs/loading-submit-states" target="_blank" class="link">Loading/Submit states</a></li>
+            <li><a href="https://docs.snipform.io/docs/field-validation" target="_blank" class="link">Field Validation</a></li>
+            <li><a href="https://docs.snipform.io/docs/error-states" target="_blank" class="link">Error States</a></li>
+            <li><a href="https://docs.snipform.io/docs/testing" target="_blank" class="link">Testing</a></li>
+        </ul>
+    </main>
+</Layout>

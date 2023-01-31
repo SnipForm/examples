@@ -1,0 +1,38 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+import Basics from "../forms/Basics.astro";
+---
+
+<Layout title="Basic Example">
+    <main>
+        <h1 class="mb-4">The Basics</h1>
+        <p class="mb-4">Edit this form at <code>src/forms/Basics.astro</code></p>
+        <!-- Form -->
+        <Card class="mb-4">
+            <Basics />
+        </Card>
+        <!-- /Form -->
+        <h2 class="my-4">On this form:</h2>
+        <ul class="mb-4">
+            <li>Add validation to form element using <code>sf-validate:[type]</code></li>
+            <li>Return errors to an element using the directive <code>error-show-text:[field_name]</code></li> - This directive has two actions:
+            <ul>
+                <li><code>show</code> - Unhide this element if 'field' had an error</li>
+                <li><code>text</code> - Inject the error's text into the element</li>
+                <li>
+                    It could also be written as two separate directives:
+                    <ul>
+                        <li><code>error-show:[field_name]</code></li>
+                        <li><code>error-text:[field_name]</code></li>
+                    </ul>
+                </li>
+            </ul>
+        </ul>
+        <h2 class="my-4">Documentation reference</h2>
+        <ul>
+            <li><a href="https://docs.snipform.io/docs/field-validation" target="_blank" class="link">Field Validation</a></li>
+            <li><a href="https://docs.snipform.io/docs/error-states" target="_blank" class="link">Error States</a></li>
+        </ul>
+    </main>
+</Layout>

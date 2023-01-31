@@ -1,0 +1,14 @@
+---
+import Logo from "../components/Logo.astro";
+import ModeToggle from "../components/ModeToggle.vue";
+import Navigation from "./Navigation.astro";
+---
+
+<nav class="flex justify-between items-center mb-8">
+    <a href="/"><Logo sizes="h-6" /></a>
+    <a href="https://docs.snipform.io/" target="_blank" class="link">SnipForm Docs</a>
+    <div class="flex gap-2 items-center">
+        <Navigation />
+        <ModeToggle client:load />
+    </div>
+</nav>

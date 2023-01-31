@@ -1,0 +1,38 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+import AdvancedValidation from "../forms/AdvancedValidation.astro";
+---
+
+<Layout title="Advanced Validation">
+    <main>
+        <h1 class="mb-4">Advanced Validation</h1>
+        <p class="mb-4">Edit this form at <code>src/forms/AdvancedValidation.astro</code></p>
+        <!-- Form -->
+        <Card class="mb-4">
+            <AdvancedValidation />
+        </Card>
+        <!-- /Form -->
+        <h2 class="my-4">On this form:</h2>
+        <ul class="mb-4">
+            <li>Return errors to an element using the directive <code>error-show-text:[field_name]</code></li>
+            <li>Add validation to form element using <code>sf-validate:[type]</code></li>
+            <ul>
+                <li><code>sf-validate:url</code>: Validates URL pattern</li>
+                <li><code>sf-validate:active_url</code>: Validates the the domain actually exists</li>
+                <li><code>sf-validate:boolean</code>: True/False 1 or 0</li>
+                <li><code>sf-validate:min[value]</code>: Number cannot be less than</li>
+                <li><code>sf-validate:max[value]</code>: Number cannot be more than</li>
+                <li><code>sf-validate:in[value1,value2,..]</code>: Exact result required</li>
+                <li><code>sf-validate:after[date]</code>: Date validation after</li>
+                <li><code>sf-validate:same[other_field]</code>: Ensures two fields have same value</li>
+                <li><code>sf-validate:accepted</code>: True, yes or 1</li>
+            </ul>
+        </ul>
+        <h2 class="my-4">Documentation reference</h2>
+        <ul>
+            <li><a href="https://docs.snipform.io/docs/field-validation" target="_blank" class="link">Field Validation</a></li>
+            <li><a href="https://docs.snipform.io/docs/error-states" target="_blank" class="link">Error States</a></li>
+        </ul>
+    </main>
+</Layout>

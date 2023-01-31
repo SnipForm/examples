@@ -1,0 +1,55 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Welcome">
+    <main>
+        <section class="mb-4">
+            <h1 class="mb-4">Welcome!</h1>
+            <p class="mb-2">These SnipForm examples have been crafted using <a href="https://tailwindcss.com/" class="link" target="_blank">Tailwind CSS</a> and <a href="https://astro.build/" class="link" target="_blank">Astro</a>.</p>
+            <p class="mb-2">Don't worry if you are new to Astro, we just use it for the convenience of decluttering the markup and serving a localhost MPA. You basically just need to know HTML.</p>
+        </section>
+        <Card class="mb-4">
+            <div class="text-center mb-2">Before you get started, make sure you have a <strong class="underline">key</strong> for your forms.</div>
+            <div class="text-center mb-2">You can get one for free at <a href="https://snipform.io" class="link" target="_blank">https://snipform.io</a>. There are no usage limits 😎</div>
+            <div class="text-center">Then replace <code>key="YOUR_KEY"</code> in the <code>snip-form</code> open tag</div>
+        </Card>
+        <section class="mb-4">
+            <p class="">All the form classes are in <code>src/assets/css/forms.css</code></p>
+        </section>
+        <section class="mt-4">
+            <h2 class="mb-4">Quick links</h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <a href="/basics" class="border rounded hover:border-pink-500 p-4 shadow">
+                    <div class="text-center mb-2"><strong class="text-lg">The Basics</strong></div>
+                    <div class="text-center">Basic example showing validation and errors</div>
+                </a>
+                <a href="/error-valid-states" class="border rounded hover:border-pink-500 p-4 shadow">
+                    <div class="text-center mb-2"><strong class="text-lg">Error & valid states</strong></div>
+                    <div class="text-center">Example showing how to use error and valid states</div>
+                </a>
+                <a href="/advanced-validation" class="border rounded hover:border-pink-500 p-4 shadow">
+                    <div class="text-center mb-2"><strong class="text-lg">Advanced Validation</strong></div>
+                    <div class="text-center">Example showing some of SnipForm's advanced validation features</div>
+                </a>
+                <a href="/loading-submit-state" class="border rounded hover:border-pink-500 p-4 shadow">
+                    <div class="text-center mb-2"><strong class="text-lg">Loading & Submit State</strong></div>
+                    <div class="text-center">Example showing how to use the loading and submit state of a form</div>
+                </a>
+                <a href="/custom-result" class="border rounded hover:border-pink-500 p-4 shadow">
+                    <div class="text-center mb-2"><strong class="text-lg">Custom Result</strong></div>
+                    <div class="text-center">Example showing how to add your own result content with input variables</div>
+                </a>
+                <a href="/full-example" class="border rounded hover:border-pink-500 p-4 shadow">
+                    <div class="text-center mb-2"><strong class="text-lg">Full example</strong></div>
+                    <div class="text-center">A full example of SnipForm's features</div>
+                </a>
+                <a href="/shorthand" class="border rounded hover:border-pink-500 p-4 shadow">
+                    <div class="text-center mb-2"><strong class="text-lg">Shorthand</strong></div>
+                    <div class="text-center">A full example using the shorthand syntax</div>
+                </a>
+            </div>
+        </section>
+    </main>
+</Layout>

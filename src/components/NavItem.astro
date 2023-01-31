@@ -1,0 +1,8 @@
+---
+const { isActive, href, text } = Astro.props;
+---
+
+<li class={isActive ? "nav-active" : "nav"}>
+    <a href={href}>{text}</a>
+    <span class={isActive ? "nav-active-span" : ""}></span>
+</li>

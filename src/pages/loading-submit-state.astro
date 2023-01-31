@@ -1,0 +1,36 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+import LoadingSubmitState from "../forms/LoadingSubmitState.astro";
+---
+
+<Layout title="Loading and Submit states">
+    <main>
+        <h1 class="mb-4">Loading and Submit states</h1>
+        <p class="mb-4">Edit this form at <code>src/forms/LoadingSubmitState.astro</code></p>
+        <!-- Form -->
+        <Card class="mb-4">
+            <LoadingSubmitState />
+        </Card>
+        <!-- /Form -->
+        <h2 class="my-4">On this form:</h2>
+        <ul class="mb-4">
+            <li>Unhides element during loading AND submit state <code>loading:show</code></li>
+            <li>Unhides element during submit state only <code>submit:show</code></li>
+            <li>Apply a class during submit state only <code>submit:class</code></li>
+            <li>Inject given text during submit state <code>submit:text</code>, then replaces the injected text with the original content after</li>
+            <li>Add validation to form element using <code>sf-validate:[type]</code></li>
+            <li>Return errors to an element using the directive <code>error-show-text:[field_name]</code></li>
+            <li class="bg-yellow-400 bg-opacity-10">
+                Note: You can test your form states with <code>&lt;snip-form mode=&quot;test&quot;&gt;</code>
+            </li>
+        </ul>
+        <h2 class="my-4">Documentation reference</h2>
+        <ul>
+            <li><a href="https://docs.snipform.io/docs/loading-submit-states" target="_blank" class="link">Loading/Submit states</a></li>
+            <li><a href="https://docs.snipform.io/docs/field-validation" target="_blank" class="link">Field Validation</a></li>
+            <li><a href="https://docs.snipform.io/docs/error-states" target="_blank" class="link">Error States</a></li>
+            <li><a href="https://docs.snipform.io/docs/testing" target="_blank" class="link">Testing</a></li>
+        </ul>
+    </main>
+</Layout>

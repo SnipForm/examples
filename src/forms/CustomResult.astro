@@ -1,0 +1,38 @@
+<snip-form key="YOUR_KEY" mode="live">
+    <!-- Your normal form -->
+    <form action="/does-not-matter">
+        <div loading:show class="absolute left-0 top-0 w-full dark:bg-black bg-white bg-opacity-75 dark:bg-opacity-25 z-10 h-full rounded-md">
+            <div class="flex justify-center items-center h-64">
+                <div class="animate-spin rounded-full h-32 w-32 border-b-2 border-primary-500"></div>
+            </div>
+        </div>
+        <div class="mb-2">
+            <label for="name" class="form-label">Full Name</label>
+            <input sf-validate:required="Please enter your name" type="text" name="full_name" id="name" class="form-input" />
+            <p error-show-text:full_name class="form-error-text"></p>
+        </div>
+        <div class="mb-2">
+            <label for="email" class="form-label">Email</label>
+            <input sf-validate:email type="email" name="email" id="email" class="form-input" placeholder="you@example.com" />
+            <p error-show-text:email class="form-error-text"></p>
+        </div>
+        <div class="flex justify-end">
+            <button submit:class="!bg-orange-500" submit:text="Submitting...." type="submit" class="form-button">Submit</button>
+        </div>
+    </form>
+    <!-- /Your normal form -->
+    <!-- Custom result, place anywhere within the snip-form tags-->
+    <!-- And remember to set display:none so that it does not render on load  -->
+    <sf-result style="display:none">
+        <div class="text-center">
+            <h2>Thank you %full_name%!</h2>
+            <p>We will get back to you as soon as possible.</p>
+            <p>We'll do our best not to spam %email%, but we can't make any promises 😬</p>
+            <div class="flex justify-center mt-4">
+                <img src="/dance.gif" class="w-full max-w-xs shadow" alt="Let's Dance" />
+            </div>
+        </div>
+    </sf-result>
+</snip-form>
+<!-- This should usually go at the bottom of your page -->
+<script src="https://cdn.snipform.io/wrap/sf.iife.js" defer></script>

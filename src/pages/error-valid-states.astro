@@ -1,0 +1,33 @@
+---
+import Card from "../components/Card.astro";
+import Layout from "../layouts/Layout.astro";
+import ErrorValidStates from "../forms/ErrorValidStates.astro";
+---
+
+<Layout title="Error and Valid states">
+    <main>
+        <h1 class="mb-4">Error and Valid states</h1>
+        <p class="mb-4">Edit this form at <code>src/forms/ErrorValidStates.astro</code></p>
+        <!-- Form -->
+        <Card class="mb-4">
+            <ErrorValidStates />
+        </Card>
+        <!-- /Form -->
+        <h2 class="my-4">On this form:</h2>
+        <ul class="mb-4">
+            <li>Add validation to form element using <code>sf-validate:[type]</code></li>
+            <li>If there are no errors, unhide element using <code>valid-show:[field_name]</code></li>
+            <li>Return errors to an element using the directive <code>error-show-text:[field_name]</code></li>
+            <li>Conditional classes for error <code>error-class:[field_name]="error-class"</code></li>
+            <li>Unhide element if there are <strong class="underline">any</strong> errors <code>if-error-show</code></li>
+            <li>Apply style if there are <strong class="underline">any</strong> errors <code>if-error-style</code></li>
+            <li>Inject text if there are <strong class="underline">any</strong> errors <code>if-error-text</code></li>
+        </ul>
+        <h2 class="my-4">Documentation reference</h2>
+        <ul>
+            <li><a href="https://docs.snipform.io/docs/field-validation" target="_blank" class="link">Field Validation</a></li>
+            <li><a href="https://docs.snipform.io/docs/error-states" target="_blank" class="link">Error States</a></li>
+            <li><a href="https://docs.snipform.io/docs/valid-states" target="_blank" class="link">Valid States</a></li>
+        </ul>
+    </main>
+</Layout>
